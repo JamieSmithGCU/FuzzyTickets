@@ -1,26 +1,15 @@
 
-# Django Project Boilerplate
+# Fuzzy Tickets
 
-This repository is a boilerplate Django project for quickly getting started.
+This repository contains the project code for implementing a dynamic pricing stategy using the Sci-Kit Fuzzy API and Django Python framework.
 
-<p align="center">
-  <a href="https://www.youtube.com/watch?v=GEogao-tUec"><img src="https://github.com/justdjango/django_project_boilerplate/blob/master/thumbnail.png" width="290"></a>
-</p>
 
 ## Getting started
 
 Steps:
 
-1. Clone/pull/download this repository
-2. Create a virtualenv with `virtualenv env` and install dependencies with `pip install -r requirements.txt`
-3. Configure your .env variables
-4. Rename your project with `python manage.py rename <yourprojectname> <newprojectname>`
-
 This project includes:
 
-1. Settings modules for deploying with Azure
-2. Django commands for renaming your project and creating a superuser
-3. A cli tool for setting environment variables for deployment
 
 ---
 
