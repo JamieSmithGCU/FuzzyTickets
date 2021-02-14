@@ -1,0 +1,153 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Material Design Bootstrap</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+    <!-- Bootstrap core CSS -->
+    <link href="{% static 'bootstrap.min.css' %}" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="{% static 'mdb.min.css' %}" rel="stylesheet">
+    <!-- Your custom styles (optional) -->
+    <link href="{% static 'style.min.css' %}" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light white scrolling-navbar">
+        <div class="container">
+
+            <!-- Collapse -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Links -->
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+                <!-- Left -->
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a href="{% url 'core:home' %}" class="nav-link waves-effect" href="#">Home
+                            <span class="sr-only"></span>
+                        </a>
+                    </li>
+                </ul>
+
+                <!-- Right -->
+                <ul class="navbar-nav nav-flex-icons">
+                    <li class="nav-item">
+                        <a href="{% url 'core:order-summary' %}" class="nav-link waves-effect">
+                            <span class="badge red z-depth-1 mr-1"></span>
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="clearfix d-none d-sm-inline-block"> </span>
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+
+        </div>
+    </nav>
+    <!-- Navbar -->
+
+    <!--Main layout-->
+    <main class="mt-5 pt-4">
+        <div class="container dark-grey-text mt-5">
+
+            <!--Grid row-->
+            <div class="row wow fadeIn">
+
+                <!--Grid row-->
+                <div class="row d-flex justify-content-center wow fadeIn">
+
+                    <!--Grid column-->
+                    <div class="col-md-6 text-center">
+
+                        <p>Your order total before any discount was applied would have been:
+                        </p>
+
+                        <h2>£{{ order_total }}0</h2>
+
+                        <p>Your total discount percentage for this order (using the underlying dynamic pricing model)
+                            would have been:
+                        </p>
+
+                        <h2>{{ discount_percent }}%</h2>
+
+                        <p>Your discount amount for this order (using the underlying dynamic pricing model) would have
+                            been:
+                        </p>
+
+                        <h2>£{{ total_discount }}</h2>
+
+                        <p>Your final price for this order (using the underlying dynamic pricing model) would have been:
+                        </p>
+
+                        <h2>£{{ final_price }}</h2>
+
+                        <h4 class="my-4 h4">Thank you!</h4>
+
+                        <p>Please use the button below to access the questionnaire related to this application.
+                            The survey will take no more than 15 minutes to complete and no personal information is
+                            saved - only your answers are retained to evaluate the efficacy of the underlying dynamic
+                            pricing approach and technology used.
+                        </p>
+
+                        <button type="button" class="btn btn-primary btn-lg btn-block m-20"
+                            onclick="window.location.href='https://www.surveymonkey.co.uk' ">Survey Monkey</button>
+
+                    </div>
+                    <!--Grid column-->
+
+                </div>
+                <!--Grid row-->
+
+
+            </div>
+            <!--Grid row-->
+
+        </div>
+    </main>
+    <!--Main layout-->
+
+    <!--Footer-->
+    <footer class="page-footer text-center font-small mt-4 wow fadeIn" style="position:absolute" style="bottom:0">
+
+        <!--Call to action-->
+        <div class="pt-4">
+
+        </div>
+        <!--/.Call to action-->
+
+        <hr class="my-4">
+
+    </footer>
+    <!--/.Footer-->
+
+    <!-- SCRIPTS -->
+    <!-- JQuery -->
+    <script type="text/javascript" src="{% static 'js/jquery-3.4.1.min.js' %}"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="{% static 'js/popper.min.js' %}"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="{% static 'js/mdb.min.js' %}"></script>
+    <!-- Initializations -->
+    <script type="text/javascript">
+        // Animations initialization
+        new WOW().init();
+
+    </script>
+</body>
+
+</html>
