@@ -153,17 +153,17 @@ class CheckoutView(View):
             # x_Level_Of_Loyalty.automf(3)
             Level_Of_Loyalty['Low'] = fuzz.gaussmf(Level_Of_Loyalty.universe, -2.776e-17, 1.062)
             Level_Of_Loyalty['Medium'] = fuzz.gaussmf(Level_Of_Loyalty.universe, 2.5, 1.062)
-            Level_Of_Loyalty['High'] = fuzz.gaussmf(Level_Of_Loyalty.universe, 5, 1.062)
+            Level_Of_Loyalty['High'] = fuzz.gaussmf(Level_Of_Loyalty.universe, 6, 1.062)
 
             # x_Merchandise_Purchased.automf(3)
             Merchandise_Purchased['None'] = fuzz.gaussmf(Merchandise_Purchased.universe, 2.776e-17, 0.8846)
             Merchandise_Purchased['Some'] = fuzz.gaussmf(Merchandise_Purchased.universe, 2.5, 0.8846)
-            Merchandise_Purchased['Alot'] = fuzz.gaussmf(Merchandise_Purchased.universe, 5, 0.8846)
+            Merchandise_Purchased['Alot'] = fuzz.gaussmf(Merchandise_Purchased.universe, 6, 0.8846)
 
             # x_Remaining_Tickets.automf(3)
             Remaining_Tickets['Low'] = fuzz.gaussmf(Remaining_Tickets.universe, -6.94e-17, 0.8845)
             Remaining_Tickets['Medium']= fuzz.gaussmf(Remaining_Tickets.universe, 2.5, 0.8845)
-            Remaining_Tickets['High'] = fuzz.gaussmf(Remaining_Tickets.universe, 5, 0.8845)
+            Remaining_Tickets['High'] = fuzz.gaussmf(Remaining_Tickets.universe, 6, 0.8845)
 
             # Custom membership functions can be built interactively with a familiar,
             # Pythonic API

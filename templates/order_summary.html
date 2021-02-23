@@ -8,7 +8,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Material Design Bootstrap</title>
+    <title>Cart</title>
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
     <!-- Bootstrap core CSS -->
@@ -120,7 +120,7 @@
                         <a href="{% url 'core:add-to-cart' order_item.item.slug %}"><i class="fas fa-plus ml-2"></i></a>
                     </td>
                     <td>
-                        <span>£{{ order_item.get_total_item_price }}0</span>
+                        <span>£{{ order_item.get_total_item_price|floatformat:2 }}</span>
                         <a style='color: red;' href="{% url 'core:remove-from-cart' order_item.item.slug %}">
                             <i class="fas fa-trash float-right"></i>
                         </a>
@@ -145,7 +145,7 @@
                 {% if object.get_total %}
                 <tr>
                     <td colspan="4"><b>Order Total</b></td>
-                    <td><b>£{{ object.get_total }}0</b></td>
+                    <td><b>£{{ object.get_total|floatformat:2 }}</b></td>
                 </tr>
                 <tr>
                     <td colspan="5">

@@ -5,15 +5,16 @@ from datetime import datetime
 
 
 VENUE_CHOICES = (
-    ('SECC', 'SECC'),
-    ('Sub Club', 'Sub Club'),
-    ('La Cheetah', 'La Cheetah'),
+    ('O2 Academy', 'O2 Academy'),
+    ('King Tuts', 'King Tuts'),
+    ('Glasgow Green', 'Glasgow Green'),
+    ('Hampden Park', 'Hampden Park'),
 )
 
 class Item(models.Model):
     title = models.CharField(max_length=100)
     price = models.FloatField()
-    venue = models.CharField(choices=VENUE_CHOICES, max_length=10)
+    venue = models.CharField(choices=VENUE_CHOICES, max_length=50)
     slug = models.SlugField()
     description = models.TextField()
     photo = models.ImageField()

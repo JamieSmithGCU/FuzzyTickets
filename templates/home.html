@@ -8,7 +8,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>Material Design Bootstrap</title>
+  <title>Home</title>
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
   <!-- Bootstrap core CSS -->
@@ -93,75 +93,63 @@
   <!-- Navbar -->
 
 
-  <!--Controls-->
-  <a class="carousel-control-prev" href="#carousel-example-1z" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="carousel-control-next" href="#carousel-example-1z" role="button" data-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
-  <!--/.Controls-->
-
-
-
   <!--Main layout-->
   <main>
     <div class="container">
 
-      <!--Navbar-->
-      <nav class="navbar navbar-expand-lg navbar-dark mdb-color lighten-3 mt-3 mb-5">
-
-        <!-- Collapse button -->
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
-          aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <!-- Collapsible content -->
-        <div class="collapse navbar-collapse" id="basicExampleNav">
-
-          <!-- Links -->
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="#">All
-                <span class="sr-only">(current)</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Shirts</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Sport wears</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Outwears</a>
-            </li>
-
-          </ul>
-          <!-- Links -->
-
-          <form class="form-inline">
-            <div class="md-form my-0">
-              <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-            </div>
-          </form>
-        </div>
-        <!-- Collapsible content -->
+      <!-- Navbar-->
+      <nav class="navbar navbar-expand-lg navbar-dark mdb-color lighten-3 mt-3 mb-3">
 
       </nav>
-      <!--/.Navbar-->
+      <!--/.Navbar -->
+      
 
       <!--Section: Products v.3-->
-      <section class="text-center mb-4">
+      <section class="text-center mb-4" style="margin-top: 70px">
+
 
         <!--Grid row-->
-        <div class="row wow fadeIn">
+        <div class="row d-flex justify-content-center wow fadeIn">
+
+            <!--Grid column-->
+            <div class="col-md-15">
+
+                <h2>Instructions:</h2>
+
+                <p>
+                  The application has been developed as part of my final year honours project at Glasgow Caledonian University. The project is concerned with implementing a dynamic pricing strategy using a specific area of Artificial Intelligence called Fuzzy Logic. 
+                </p>
+
+                <p>
+                  This web application contains the functionality typical of a ticket merchant website. It is possible to browse events, add/remove items from a cart, and go through a checkout process. To assist with my project, all you need to do is:
+                </p>
+              <strong>1. Browse the events and add at least one ticket for an event to your cart.</strong></br>
+                  <strong>2. Proceed to the checkout and provide values for the three fields at the bottom of the form. The values you provide determine the discount you receive at the end of the checkout process.</strong></br>
+                  <strong>3. Submit the form to view the details of your order and the potential discount you would have received.</strong></br>
+                  <strong>4. Follow the link to complete the questionnaire which asks about your experience of using the application.</strong></br>
+                  <p></p>
+                  <p>No personal information is stored that is entered on this application. Only answers to the questionnaire are retained, and no personal information is asked for at any stage. If you would like more information about the project please email me at <strong>jsmith248@caledonian.ac.uk</strong>. If you would like to view the project code you can do so by following the link to the Github repository <a href="https://github.com/JamieSmithGCU/FuzzyTickets">here.</a></p>
+            </div>
+            <!--Grid column-->
+
+        </div>
+        <!--Grid row-->
+
+        {% for message in messages %}
+        <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+        {{ message }}
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+        </div>
+        {% endfor %}
+
+        <!--Grid row-->
+        <div class="row wow fadeIn mb-4">
 
           {% for item in object_list %}
           <!--Grid column-->
-          <div class="col-lg-3 col-md-6 mb-4">
+          <div class="col-lg-3 col-md-6 mb-4 mt-20">
 
             <!--Card-->
             <div class="card">
@@ -182,18 +170,12 @@
                   <h3>{{ item.title }}</h3>
                 </a>
                 <h4>
-                  <strong>
-                    <a href="{{ item.get_absolute_url }}" class="grey-text">{{ item.venue }}
+                    <a href="{{ item.get_absolute_url }}" class="dark-grey-text">{{ item.venue }}
                       <span class="badge badge-pill danger-color"></span>
                     </a>
-                  </strong>
                 </h4>
-                <h4 class="font-weight-bold grey-text">
-                  <strong>{{ item.date|date:'d-m-Y' }}</strong>
-                </h4>
-                <h4 class="font-weight-bold grey-text">
-                  <strong>£{{ item.price }}0</strong>
-                </h4>
+                <h4 class="dark-grey-text">{{ item.date|date:'d-m-Y' }}</h4>
+                <h4 class="dark-grey-text">£{{ item.price }}0</h4>
 
               </div>
               <!--Card content-->
@@ -250,7 +232,7 @@
     <!-- Social icons -->
     <div class="pb-4">
 
-      <a href="" target="_blank">
+      <a href="https://github.com/JamieSmithGCU/FuzzyTickets" target="_blank">
         <i class="fab fa-github mr-3"></i>
       </a>
 

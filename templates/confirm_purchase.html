@@ -7,7 +7,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Material Design Bootstrap</title>
+    <title>Purchase Complete</title>
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
     <!-- Bootstrap core CSS -->
@@ -75,31 +75,33 @@
                         <p>Your order total before any discount was applied would have been:
                         </p>
 
-                        <h2>£{{ order_total }}0</h2>
+                        <h2>£{{ order_total|floatformat:2  }}</h2>
 
                         <p>Your total discount percentage for this order (using the underlying dynamic pricing model)
                             would have been:
                         </p>
 
-                        <h2>{{ discount_percent }}%</h2>
+                        <h2>{{ discount_percent|floatformat:2 }}%</h2>
 
                         <p>Your discount amount for this order (using the underlying dynamic pricing model) would have
                             been:
                         </p>
 
-                        <h2>£{{ total_discount }}</h2>
+                        <h2>£{{ total_discount|floatformat:2 }}</h2>
 
                         <p>Your final price for this order (using the underlying dynamic pricing model) would have been:
                         </p>
 
-                        <h2>£{{ final_price }}</h2>
+                        <h2>£{{ final_price|floatformat:2 }}</h2>
+
+                        <p>If you would like to explore the application more and submit different values to get a different result, please feel free to do so.</p>
 
                         <h4 class="my-4 h4">Thank you!</h4>
 
                         <p>Please use the button below to access the questionnaire related to this application.
-                            The survey will take no more than 15 minutes to complete and no personal information is
+                            The survey will take no more than 10 minutes to complete and no personal information is
                             saved - only your answers are retained to evaluate the efficacy of the underlying dynamic
-                            pricing approach and technology used.
+                            pricing approach and technology used to implement it. 
                         </p>
 
                         <button type="button" class="btn btn-primary btn-lg btn-block m-20"
