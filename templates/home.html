@@ -107,34 +107,6 @@
       <!--Section: Products v.3-->
       <section class="text-center mb-4" style="margin-top: 70px">
 
-
-        <!--Grid row-->
-        <div class="row d-flex justify-content-center wow fadeIn">
-
-            <!--Grid column-->
-            <div class="col-md-15">
-
-                <h2>Instructions:</h2>
-
-                <p>
-                  The application has been developed as part of my final year honours project at Glasgow Caledonian University. The project is concerned with implementing a dynamic pricing strategy using a specific area of Artificial Intelligence called Fuzzy Logic. 
-                </p>
-
-                <p>
-                  This web application contains the functionality typical of a ticket merchant website. It is possible to browse events, add/remove items from a cart, and go through a checkout process. To assist with my project, all you need to do is:
-                </p>
-              <strong>1. Browse the events and add at least one ticket for an event to your cart.</strong></br>
-                  <strong>2. Proceed to the checkout and provide values for the three fields at the bottom of the form. The values you provide determine the discount you receive at the end of the checkout process.</strong></br>
-                  <strong>3. Submit the form to view the details of your order and the potential discount you would have received.</strong></br>
-                  <strong>4. Follow the link to complete the questionnaire which asks about your experience of using the application.</strong></br>
-                  <p></p>
-                  <p>No personal information is stored that is entered on this application. Only answers to the questionnaire are retained, and no personal information is asked for at any stage. If you would like more information about the project please email me at <strong>jsmith248@caledonian.ac.uk</strong>. If you would like to view the project code you can do so by following the link to the Github repository <a href="https://github.com/JamieSmithGCU/FuzzyTickets">here.</a></p>
-            </div>
-            <!--Grid column-->
-
-        </div>
-        <!--Grid row-->
-
         {% for message in messages %}
         <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
         {{ message }}
