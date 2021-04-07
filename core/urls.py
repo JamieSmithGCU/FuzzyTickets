@@ -12,6 +12,7 @@ from .views import (
 )
 app_name = 'core'
 
+# Applciation paths which render the imported views.
 urlpatterns = [
     path('', HomeView.as_view(), name='home'),
     path('checkout/', CheckoutView.as_view(), name='checkout'),
